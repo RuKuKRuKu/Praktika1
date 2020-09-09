@@ -1,0 +1,57 @@
+package com.company;
+
+
+public class Class {
+
+    static class Book {
+        private String author, name, age, editor, page;
+
+        public Book(String author, String name, String age, String editor, String page) {
+            this.author = author;
+            this.name = name;
+            this.age = age;
+            this.editor = editor;
+            this.page = page;
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getAge() {
+            return age;
+        }
+
+        public String getEditor() {
+            return editor;
+        }
+
+        public String getPage() {
+            return page;
+        }
+
+        @Override
+        public String toString() {
+            return "Book{" +
+                    "Author=" + author + '\'' +
+                    ", Name=" + name + '\'' +
+                    " Age=" + age + '\'' +
+                    ", Editor=" + editor +
+                    ", Page=" + page +
+                    '}';
+
+        }
+
+
+    }
+
+        public static void main(String[] arg) {
+      Book book = new Book ("Tolst", "Warpeace", "tusucha", "Mgsu",
+              "five hundred");
+            System.out.println( book.toString());
+        }
+    }
