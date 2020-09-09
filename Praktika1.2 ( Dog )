@@ -1,0 +1,41 @@
+package com.company;
+import java.lang.*;
+public class Dog {
+    private String name;
+    private int age;
+
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName(String name) {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String toString() {
+        return this.name + ", age " + this.age;
+    }
+
+    public void HumanAge() {
+        System.out.println(name + " human years =  " + age * 7);
+    }
+    public static void main(String[] args) {
+        Dog papa = new Dog("Papi4", 1000);
+        System.out.println(papa);
+        papa.HumanAge();
+
+    }
+}
