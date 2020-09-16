@@ -1,0 +1,118 @@
+package com.company;
+public class Human
+{
+    private String name;
+    private int age;
+
+    public static class Head
+    {
+        private String colour;
+        private int diameter;
+
+        public Head(String c, int d)
+        {
+            colour = c;
+            diameter = d;
+        }
+
+        public void setColour(String colour)
+        {
+            this.colour = colour;
+        }
+
+        public void setDiameter(int diameter)
+        {
+            this.diameter = diameter;
+        }
+
+        public String getColour()
+        {
+            return colour;
+        }
+
+        public int getDiameter()
+        {
+            return diameter;
+        }
+    }
+
+    public static class Leg
+    {
+        private int length, weight;
+        public Leg(int l, int w)
+        {
+            length = l;
+            weight = w;
+        }
+
+        public void setLength(int length)
+        {
+            this.length = length;
+        }
+
+        public void setWeight(int weight)
+        {
+            this.weight = weight;
+        }
+
+        public int getLength()
+        {
+            return length;
+        }
+
+        public int getWeight()
+        {
+            return weight;
+        }
+    }
+
+    public static class Hand
+    {
+        private String skin;
+        private int fingers;
+        public Hand(String s, int f)
+        {
+            skin = s;
+            fingers = f;
+        }
+
+        public void setSkin(String skin)
+        {
+            this.skin = skin;
+        }
+
+        public void setFingers(int fingers)
+        {
+            this.fingers = fingers;
+        }
+
+        public String getSkin()
+        {
+            return skin;
+        }
+
+        public int getFingers()
+        {
+            return fingers;
+        }
+    }
+
+    public Human()
+    {
+        Head head = new Head("black", 60);
+        Leg leg = new Leg(120, 15);
+        Hand hand = new Hand("white", 5);
+    }
+
+    public static void main(String[] args)
+    {
+        Human.Head head = new Human.Head("black", 60);
+        Human.Leg leg = new Human.Leg(120, 15);
+        Human.Hand hand = new Human.Hand("black", 10);
+        Human hum = new Human();
+        System.out.println("hair colour "+head.getColour()+", head diameter "+head.getDiameter());
+        System.out.println("leg length "+leg.getLength()+", weight  "+leg.getWeight());
+        System.out.println("skin colour "+hand.getSkin()+", finger  "+hand.getFingers());
+
+    }
+}
